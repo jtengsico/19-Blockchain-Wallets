@@ -5,7 +5,7 @@
 
   <p align="center">
   FinTech finder allows you to transfer funds (ETH) from your wallet to hire a fintech professional of your choice. 
-    <a href="https://github.com/jtengsico/18-Blockchain-With-Python.git">View Demo</a>
+    <a href="https://github.com/jtengsico/19-Blockchain-Wallets.git">
   </p>
 </div>
 
