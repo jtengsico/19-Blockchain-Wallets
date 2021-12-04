@@ -29,11 +29,11 @@ This project allows you to make a wallet, add ETH, and pay a fintech professiona
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
-*python 3.7 
-*streamlit 0.84.2
-*dotenv 
-*bip44 
-*web3 
+* python 3.7 
+* streamlit 0.84.2
+* dotenv 
+* bip44 
+* web3 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
