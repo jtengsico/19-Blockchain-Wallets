@@ -1,19 +1,11 @@
 <div id="top"></div>
-
-
-<!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/marketwhale.png" alt="Logo" width="80" height="80">
-  </a>
 
-
-<h3 align="center">Marketwhale</h3>
+<h3 align="center">FinTech Finder</h3>
 
   <p align="center">
-MarketWhale is a project dedicated to researching, testing, and providing users with machine learning enhanced algorithmic trading bots that make accurate predictions for crypto currency.
-    <a href="https://github.com/woodedlawn/marketwhale.git">View Demo</a>
+  FinTech finder allows you to transfer funds (ETH) from your wallet to hire a fintech professional of your choice. 
+    <a href="https://github.com/jtengsico/18-Blockchain-With-Python.git">View Demo</a>
   </p>
 </div>
 
@@ -21,77 +13,65 @@ MarketWhale is a project dedicated to researching, testing, and providing users 
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#Sample Data">Sample Data</a></li>
+    <li><a href="#about-the-project">About The Project</a>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#transaction-data">Transaction Data</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contributing</a></li>
-    <li><a href="#references">References</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-The project utilizes SVM, LSTM, and CNN models in order to forecast future crypto prices. Based on testing, the model for SVM that utilizes the fear and greed index performs better than LSTM/CNN models. Future steps involve creating a hybrid of LSTM and CNN models with the fear and greed index to increase accuracy. In general, machine learning models tend to have prediction rates above 50% which is considered good but application using live data tends to perform worse than prediction. Once the models are complete, backtesting will be performed to check degree of accuracy and if predications can be applied to live data. There are also plans to integrate trading strategies into the algorithm and utilize 1-minute price data instead of hourly data. Increasing accuracy above 51 - 53% percent and making sure that the model performs well in the market is a future goal of our company.
+This project allows you to make a wallet, add ETH, and pay a fintech professional through a streamlit app. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
-
-* python 3.7.10
-* jupyterlab 3.0.14
-* pandas 1.2.4
-* yfinance 0.1.63
-* numpy 1.19.5
-* hvplot 0.7.3
-* math 1.2.1
-* finta 1.3
-* scikit-learn 0.24.1
-* tensorflow 2.6.0
-* sci-kit learn 0.22.2.post1
+*python 3.7 
+*streamlit 0.84.2
+*dotenv 
+*bip44 
+*web3 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-## Getting Started
+<!-- Installation -->
+### Installation 
 
-To setup this algorithm locally on your desktop, please clone the repo.
-After cloning the repo, you can run the program utilizing jupyter lab/notebook.
-
-The machine learning model was run using Google Colab. 
-A saved LSTM and CNN model is saved in json and you can use those models so you won't have to import the ipynb file to Google Colab to re-run the model. 
-
-### Installation
+To setup this program on your desktop, please clone the repo.
+Make sure you get some ETH from the KOVAN testnet before running this application.
+You need ETH to hire the fintech professional.
+After cloning the repo, follow the steps below.
 
 1. Clone the repo
    ```sh
-   git clone 
+   git clone https://github.com/jtengsico/19-Blockchain-Wallets.git
    ```
-2. Install required python packages listed in the ipynb file. 
-   ```sh
-   use conda or pip install
-   ```
-3. Run the file in jupyter lab/notebook
+2. Install required python packages listed in the Built With section. 
+3. In your terminal, navigate to the folder that contains the fintech_finder.py file. 
+4. Enter streamlit run fintech_finder.py and this will launch the streamlit app in your default browser. 
+5. You should see the screen below.
+![fintech_trader_runningprogram.png](images_execution/fintech_trader_runningprogram.png) 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- Sample Data -->
-## Sample Data
-SVM Model is shown below. 
-![svm_fear.greed.png](images/svm_fear.greed.png)
-![fear_and_greed.png](images/fear_and_greed.png)  
-![svm_plot.png](images/svm_plot.png)
+<!-- Transaction Data -->
+## Transaction Data
+1. First go to https://kovan.etherscan.io/ (Kovan Testnet) and look up your Ethereum address to see your transaction balance. 
+![etherscan_kovan_testnet.png](images_execution/etherscan_kovan_testnet.png) 
+
+2. On the streamlit app, select a professional and the amount of time you will hire them for. 
+Next, validate that amount and you should see the screen below on the left hand side. 
+![validated_transaction19.png](images_execution/validated_transaction19.png) 
+
+3. Go back to etherscan and look up your Ethereum address again to see that funds have left your account. 
+![etherscan_transaction_customeraddress.png](images_execution/etherscan_transaction_customeraddress.png)
+
+4. Go to the streamlit app and copy the address where the transaction was sent to. Go back to etherscan and check the balance of that account. 
+You should see that there was a recent transaction for the fintech professional you hired. 
+![etherscan_fintech_professional_account.png](images_execution/etherscan_fintech_professional_account.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -102,28 +82,6 @@ Distributed under the MIT License.
 See [license txt](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- CONTRIBUTERS -->
-## Contributers
-
-* Jonathan Woolsey - neural network
-* Rodrigo Monge - algorithmic trading
-* Jasmine Tengsico - research 
-
-Project Link: [https://github.com/woodedlawn/marketwhale.git](https://github.com/woodedlawn/marketwhale.git)
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- References -->
-## References
-Research related resources and repos. 
-* [CNN-LSTM Crypto Forecasting](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
-* [Cryptocurrency price prediction models](https://academic.microsoft.com/paper/3125634108/citedby/search?q=Anticipating%20cryptocurrency%20prices%20using%20machine%20learning&qe=RId%253D3125634108&f=&orderBy=0)
-* [Neural Networks for Algorithmic Trading](https://alexrachnog.medium.com/neural-networks-for-algorithmic-trading-backtesting-in-pandas-4940fec2175e)
-* [Backtesting for stocks](https://machinelearningmastery.com/backtest-machine-learning-models-time-series-forecasting/)
-* [Using saved ML models](https://towardsdatascience.com/saving-and-loading-keras-model-42195b92f57a)
-* [Brief overview of neural network](https://github.com/VivekPa/IntroNeuralNetworks?ref=pythonrepo.com)
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments

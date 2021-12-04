@@ -65,7 +65,7 @@ from typing import Any, List
 # Step 1 - Part 3:
 # Import functions from the `crypto_wallet.py` 
 
-from crypto_wallet.py import generate_account, get_balance, send_transaction
+from crypto_wallet import generate_account, get_balance, send_transaction
 ################################################################################
 # Fintech Finder Candidate Information
 
@@ -104,7 +104,6 @@ st.text(" \n")
 
 ################################################################################
 # Streamlit Sidebar Code - Start
-
 st.sidebar.markdown("## Client Account Address and Ethernet Balance in Ether")
 
 ##########################################
@@ -181,13 +180,7 @@ st.sidebar.markdown("## Total Wage in Ether")
 # Step 2 - Part 1:
 # total `wage` for the candidate by multiplying the candidate’s hourly
 # rate from the candidate database (`candidate_database[person][3]`) by the
-# value of the `hours` variable
-wage = hours * hourly_rate
 
-# Write the `wage` calculation to the Streamlit sidebar
-st.sidebar.write(wage)
-
-##########################################
 # Step 2 - Part 2:
 # * Call the `send_transaction` function and pass it three parameters:
     # - Your Ethereum `account` information. (Remember that this `account`
@@ -205,6 +198,16 @@ st.sidebar.write(wage)
 # variable named `transaction_hash`, and have it display on the application’s
 # web interface.
 
+
+# value of the `hours` variable
+wage = hours * hourly_rate
+
+# Write the `wage` calculation to the Streamlit sidebar
+st.sidebar.write(wage)
+
+# * Save the transaction hash that the `send_transaction` function returns as a
+# variable named `transaction_hash`, and have it display on the application’s
+# web interface.
 
 if st.sidebar.button("Send Transaction"):
     transaction_hash = send_transaction(account, candidate_address, wage) 
